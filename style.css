@@ -1,0 +1,127 @@
+/* 
+ - FONT SIZE SYSTEM (px)
+    10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+ - SPACING SYSTEM (px)
+    2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+ 
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  gap: 1rem;
+  background-color: #090b1a;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  margin-top: 2rem;
+}
+main {
+  max-width: 22rem;
+  display: grid;
+  justify-items: center;
+  gap: 1rem;
+
+  background-color: #1b1938;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.img-container {
+  width: 100%;
+  background-color: #aa5cdb;
+  display: inline-flex;
+}
+.hero-img {
+  width: 100%;
+  opacity: 80%;
+  mix-blend-mode: multiply;
+}
+
+.hero-heading {
+  font-size: 1.875rem;
+  margin-top: 1.15rem;
+}
+.hero-heading span {
+  color: #aa5cdb;
+}
+.padding--align {
+  padding: 0 2rem;
+  text-align: center;
+}
+.hero-description {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.6;
+  padding-top: 0;
+}
+.list {
+  list-style: none;
+  font-family: "Lexend Deca", sans-serif;
+  text-transform: uppercase;
+  display: grid;
+  gap: 0.5rem;
+  margin-bottom: 2.25rem;
+}
+.list li:first-child {
+  text-transform: none;
+}
+.list li:nth-child(odd) {
+  font-size: 1.5rem;
+  padding-top: 1.125rem;
+}
+.list li:nth-child(even) {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+@media (min-width: 45rem) {
+  main {
+    max-width: 55rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  .img-container {
+    grid-column: 2/3;
+    grid-row: 1/4;
+  }
+  .padding--align {
+    padding: 0 3rem;
+    text-align: left;
+  }
+  .hero-heading {
+    padding-top: 2rem;
+    grid-row: 1/2;
+    font-size: 1.875rem;
+  }
+  .hero-description {
+    font-size: 0.8rem;
+  }
+  .list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem 3rem;
+  }
+  .list li:nth-child(odd) {
+    grid-row: 1;
+    font-size: 1.25rem;
+  }
+  .list li:nth-child(even) {
+    grid-row: 2;
+    font-size: 0.65rem;
+  }
+}
+footer {
+  font-size: 11px;
+  text-align: center;
+}
+footer a {
+  color: hsl(228, 45%, 44%);
+}
